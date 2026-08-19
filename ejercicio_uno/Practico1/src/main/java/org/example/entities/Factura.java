@@ -1,5 +1,5 @@
 package org.example.entities;
 
-public class entities {
+public class Factura {
     
 }

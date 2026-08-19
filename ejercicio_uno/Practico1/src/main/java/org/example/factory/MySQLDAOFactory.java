@@ -1,5 +1,5 @@
 package org.example.factory;
 
-public class factory {
+public class MySQLDAOFactory {
     
 }
