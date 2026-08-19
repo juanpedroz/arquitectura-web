@@ -1,5 +1,5 @@
 package org.example.dao;
 
-public class facturaDAO {
+public class FacturaDAO {
     
 }
