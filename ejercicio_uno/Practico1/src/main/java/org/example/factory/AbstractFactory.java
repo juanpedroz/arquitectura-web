@@ -6,13 +6,13 @@ import org.example.dao.FacturaDAO;
 import org.example.dao.FacturaProductoDAO;
 
 
-public class AbstractFactory {
+public abstract class AbstractFactory {
     public static final int MYSQL_JDBC = 1;
 
     public abstract ClienteDAO getClienteDAO();
     public abstract FacturaDAO getFacturaDAO();
     public abstract ProductoDAO getProductoDAO();
-    public abstract FacturaProducto getFacturaProducto();
+    public abstract FacturaProductoDAO getFacturaProductoDAO();
 
     public static AbstractFactory getDAOFactory(int whichFactory) {
         switch (whichFactory) {
