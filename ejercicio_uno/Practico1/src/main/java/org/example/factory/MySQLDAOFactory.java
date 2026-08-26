@@ -12,54 +12,22 @@ import java.sql.SQLException;
 
 public class MySQLDAOFactory extends AbstractFactory {
     private static MySQLDAOFactory instance = null;
-
-    public static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-    public static final String uri = "jdbc:mysql://localhost:3306/demodao";
     public static Connection conn;
 
-    private MySQLDAOFactory() {
+    private MySQLDAOFactory(Connection connection) {
+        conn = connection;
     }
 
-    public static synchronized MySQLDAOFactory getInstance() {
+    public static synchronized MySQLDAOFactory getInstance(Connection connection) {
         if (instance == null) {
-            instance = new MySQLDAOFactory();
+            instance = new MySQLDAOFactory(connection);
         }
         return instance;
     }
 
-    public static Connection createConnection() {
-        if (conn != null) {
-            return conn;
-        }
-        String driver = DRIVER;
-        try {
-            Class.forName(driver).getDeclaredConstructor().newInstance();
-        } catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException
-                 | NoSuchMethodException | SecurityException | ClassNotFoundException e) {
-            e.printStackTrace();
-            System.exit(1);
-        }
-
-        try {
-            conn = DriverManager.getConnection(uri, "root", "");
-            conn.setAutoCommit(false);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return conn;
-    }
-
-    public void closeConnection() {
-        try {
-            conn.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
     @Override
     public ClienteDAO getClienteDAO() {
-        return null;
+        return new ClienteDAO(conn);
     }
 
     @Override

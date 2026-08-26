@@ -1,5 +1,10 @@
 package org.example;
 
+import org.example.dao.ClienteDAO;
+import org.example.dao.FacturaDAO;
+import org.example.dao.FacturaProductoDAO;
+import org.example.dao.ProductoDAO;
+import org.example.factory.AbstractFactory;
 import org.example.utils.HelperMySQL;
 
 public class Main {
@@ -9,11 +14,20 @@ public class Main {
 
         try {
             mySQLdb.setUpDatabase();
+
+            AbstractFactory mySQLFactory = AbstractFactory.getDAOFactory(1, mySQLdb.getConnection());
+
+
+
+
+
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+
+        } finally {
             mySQLdb.closeConnection();
 
-        }catch (Exception e) {
-            System.out.println(e);
         }
-
     }
 }

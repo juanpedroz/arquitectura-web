@@ -1,5 +1,6 @@
 package org.example.utils;
 
+import lombok.Getter;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
@@ -21,6 +22,8 @@ import java.sql.SQLException;
  *  Handles the connection to the MySQL database.
  * */
 
+
+@Getter
 public class HelperMySQL {
     /** Active connection used to execute basic DB operations. */
     private Connection connection = null;
