@@ -295,7 +295,7 @@ public class HelperMySQL {
             pst = this.connection.prepareStatement(insert);
             pst.setInt(1, newProducto.getIdProducto());
             pst.setString(2,newProducto.getNombre());
-            pst.setFloat(3, (float) newProducto.getValor());
+            pst.setFloat(3, newProducto.getValor());
 
             if(pst.executeUpdate() == 0) {
                 throw new Exception("No se pudo insertar en producto");
