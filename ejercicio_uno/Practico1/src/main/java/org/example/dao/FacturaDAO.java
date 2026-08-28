@@ -13,7 +13,7 @@ public class FacturaDAO {
 
     private Connection connection;
 
-    private FacturaDAO(Connection connection){
+    public FacturaDAO(Connection connection){
         this.connection = connection;
     }
 
