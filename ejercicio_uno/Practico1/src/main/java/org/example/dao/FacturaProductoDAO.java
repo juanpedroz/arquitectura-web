@@ -22,14 +22,14 @@ public class FacturaProductoDAO {
      * Prepares a SELECT query to retrieve all the rows in the table, then iterates over the
      * result set and adds each row to the returned list.
      *
-     * @return List<FacturaProducto> with the recovered data or null if the list is empty.
+     * @return List<FacturaProducto> with the recovered data
      * */
 
     public List<FacturaProducto> getAll() {
         ArrayList<FacturaProducto> data = new ArrayList<>();
 
         String query =  "SELECT * " +
-                "FROM Factura_Producto";
+                        "FROM Factura_Producto";
         PreparedStatement pst = null;
         ResultSet resultSet = null;
 
@@ -71,7 +71,6 @@ public class FacturaProductoDAO {
      *
      * @param facturaProducto object with the data to insert.
      * @return true if the insert is successful, false otherwise.
-     *
      */
 
     public boolean insert(FacturaProducto facturaProducto) {
@@ -106,20 +105,23 @@ public class FacturaProductoDAO {
     }
 
     /**
-     *  Delete a FacturaProducto from the database by its id.
+     *  Delete a FacturaProducto from the database by its PK.
+     *  This table has a composite PK.
      *
-     *  @param id id of the product to delete.
+     *  @param idFactura id of the facture, part of the composite key.
+     *  @param idProducto id of the product, part of the composite key.
      *  @return true if to delete is successful, false otherwise.
      *  */
 
-    public boolean delete(int id){
-        String query = "DELETE FROM Factura_Producto WHERE idProducto = ?";
+    public boolean delete(int idFactura, int idProducto){
+        String query = "DELETE FROM Factura_Producto WHERE idFactura = ? AND idProducto = ?";
         PreparedStatement pst = null;
         boolean isDeleted = false;
 
         try {
             pst = this.connection.prepareStatement(query);
-            pst.setInt(1, id);
+            pst.setInt(1, idFactura);
+            pst.setInt(2, idProducto);
 
             isDeleted = pst.executeUpdate() > 0;
 
@@ -149,7 +151,7 @@ public class FacturaProductoDAO {
      * */
 
     public boolean update(FacturaProducto facturaProducto){
-        String query = "UPDATE Factura_Producot SET cantidad = ? WHERE idFactura = ? AND idProducto = ? ";
+        String query = "UPDATE Factura_Producto SET cantidad = ? WHERE idFactura = ? AND idProducto = ? ";
         PreparedStatement pst = null;
         boolean isUpdated = false;
 
@@ -181,31 +183,31 @@ public class FacturaProductoDAO {
 
 
     /**
-     *  Get a single FacturaProducto from the database by its id.
+     *  Get a single FacturaProducto from the database by its composite PK.
      *
-     *  @param idFactura id of the FacturaProducto to search.
-     * @param idProducto id of the FacturaProducto to search.
+     *  @param idFacturaP id of the Facture, part of the PK.
+     *  @param idProductoP id of the Product. part of the PK.
      *  @return the FacturaProducto with the given id, or null if it doesn't exist.
      * */
 
-    public Producto find(int idFactura, int idProducto) {
-        Producto data = null;
+    public FacturaProducto find(int idFacturaP, int idProductoP) {
+        FacturaProducto data = null;
         String query = "SELECT * FROM Factura_Producto WHERE idFactura = ? AND idProducto = ?";
         PreparedStatement pst = null;
         ResultSet result = null;
 
         try {
             pst = this.connection.prepareStatement(query);
-            pst.setInt(1, idFactura);
-            pst.setInt(2, idProducto);
+            pst.setInt(1, idFacturaP);
+            pst.setInt(2, idProductoP);
             result = pst.executeQuery();
 
             if (result.next()) {
                 int idFactura = result.getInt("idFactura");
-                String nombre = result.getString("nombre");
-                float valor = result.getFloat("valor");
+                int idProducto = result.getInt("idProducto");
+                int cantidad = result.getInt("cantidad");
 
-                data = new Producto(idProducto, nombre, valor);
+                data = new FacturaProducto(idFactura, idProducto, cantidad);
             }
 
         } catch (Exception e) {
