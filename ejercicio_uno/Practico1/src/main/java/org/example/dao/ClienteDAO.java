@@ -140,6 +140,9 @@ public class ClienteDAO {
 
     }
 
+    // Calcula el total facturado por cliente (cantidad * valor de cada producto, sumado por factura)
+    // y devuelve la lista ordenada de mayor a menor facturación.
+    
     public List<ClientesFacturadosDTO> getClientesOrdenadosPorFacturacion(){
         String query =  "SELECT c.idCliente, c.nombre, SUM(fp.cantidad * p.valor) AS totalFacturado " +
                         "FROM Cliente c " +

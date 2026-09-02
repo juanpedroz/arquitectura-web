@@ -230,6 +230,8 @@ public class ProductoDAO {
     }
 
 
+    // Calcula la recaudación total de cada producto (cantidad * valor en cada factura)
+    // y devuelve el que tiene mayor recaudación.
     public ProductoRecaudacionDTO getProductoMasRecaudado() {
         ProductoRecaudacionDTO data = null;
 
