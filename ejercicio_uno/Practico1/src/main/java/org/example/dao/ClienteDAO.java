@@ -1,5 +1,6 @@
 package org.example.dao;
 
+import org.example.dto.ClientesFacturadosDTO;
 import org.example.entities.Cliente;
 
 import java.sql.*;
@@ -137,5 +138,43 @@ public class ClienteDAO {
             }
         }
 
+    }
+
+    public List<ClientesFacturadosDTO> getClientesOrdenadosPorFacturacion(){
+        String query =  "SELECT c.idCliente, c.nombre, SUM(fp.cantidad * p.valor) AS totalFacturado " +
+                        "FROM Cliente c " +
+                        "JOIN Factura f ON f.idCliente = c.idCliente " +
+                        "JOIN Factura_Producto fp ON fp.idFactura = f.idFactura " +
+                        "JOIN Producto p ON p.idProducto = fp.idProducto " +
+                        "GROUP BY c.idCliente, c.nombre " +
+                        "ORDER BY totalFacturado DESC";
+        ArrayList<ClientesFacturadosDTO> data = new ArrayList<>();
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        try {
+            ps = connection.prepareStatement(query);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                data.add(new ClientesFacturadosDTO(
+                        rs.getInt("idCliente"),
+                        rs.getString("nombre"),
+                        rs.getDouble("totalFacturado")));
+            }
+            return data;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 }
