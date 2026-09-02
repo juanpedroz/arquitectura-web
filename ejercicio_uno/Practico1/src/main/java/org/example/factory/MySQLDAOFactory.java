@@ -5,10 +5,7 @@ import org.example.dao.ProductoDAO;
 import org.example.dao.FacturaDAO;
 import org.example.dao.FacturaProductoDAO;
 
-import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 
 public class MySQLDAOFactory extends AbstractFactory {
     private static MySQLDAOFactory instance = null;
@@ -42,6 +39,6 @@ public class MySQLDAOFactory extends AbstractFactory {
 
     @Override
     public FacturaProductoDAO getFacturaProductoDAO() {
-        return null;
+        return new FacturaProductoDAO(conn);
     }
 }
