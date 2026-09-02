@@ -37,7 +37,7 @@ public class MySQLDAOFactory extends AbstractFactory {
 
     @Override
     public ProductoDAO getProductoDAO() {
-        return null;
+        return new ProductoDAO(conn);
     }
 
     @Override
