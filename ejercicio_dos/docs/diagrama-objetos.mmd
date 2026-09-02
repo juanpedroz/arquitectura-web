@@ -1,0 +1,25 @@
+classDiagram
+    class Estudiante {
+        int id
+        String dni
+        String nombre
+        String apellido
+        int edad
+        String genero
+        String ciudad
+        String lu
+    }
+    class Carrera {
+        int id
+        String nombre
+        int duracion
+    }
+    class Inscripcion {
+        int id
+        int inscripcion
+        int graduacion
+        int antiguedad
+        boolean esGraduado()
+    }
+    Estudiante "1" --> "N" Inscripcion
+    Carrera "1" --> "N" Inscripcion

@@ -54,3 +54,4 @@ Los commits hechos con asistencia de IA quedan firmados con una línea
 | Fecha | Qué se hizo | Cómo se verificó |
 |---|---|---|
 | 2026-09-02 | Configuración inicial del agente: `CLAUDE.md`, `.claude/skills/` con cuatro skills y esta bitácora. Se creó la carpeta `ejercicio_dos/` a la espera de la consigna | Revisión manual de los archivos creados |
+| 2026-09-02 | Llegó la consigna del Integrador 2 (registro de estudiantes, JPA). Se usó el skill `/grilling` para entrevistar en rondas hasta cerrar el árbol de decisiones de diseño. Se generó `docs/plan-integrador-estudiantes.md` con el modelo, los diagramas (mermaid `.mmd`), las consultas JPQL y la estrategia de carga de CSV. No se implementó código todavía | El plan quedó como documento; los diagramas `.mmd` se generaron con mermaid y quedan pendientes de exportar a imagen para la entrega |

@@ -1,0 +1,26 @@
+erDiagram
+    ESTUDIANTE {
+        int id PK
+        string dni UK
+        string nombre
+        string apellido
+        int edad
+        string genero
+        string ciudad
+        string lu UK
+    }
+    CARRERA {
+        int id PK
+        string nombre
+        int duracion
+    }
+    INSCRIPCION {
+        int id PK
+        int estudiante_id FK
+        int carrera_id FK
+        int inscripcion
+        int graduacion
+        int antiguedad
+    }
+    ESTUDIANTE ||--o{ INSCRIPCION : "se inscribe en"
+    CARRERA ||--o{ INSCRIPCION : "tiene"
