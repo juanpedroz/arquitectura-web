@@ -45,7 +45,7 @@ public class HelperMySQL {
 
          try {
              String DB_USER = "root";
-             String DB_URL = "jdbc:mysql://localhost:3306/db_mysql_arq_web";
+             String DB_URL = "jdbc:mysql://localhost:3306/integrador1";
              String DB_PASSWORD = "";
 
              this.connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);

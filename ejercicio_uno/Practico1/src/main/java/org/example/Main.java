@@ -18,6 +18,8 @@ public class Main {
 
             AbstractFactory mySQLFactory = AbstractFactory.getDAOFactory(1, mySQLdb.getConnection());
 
+            System.out.println("Base de datos lista");
+
 
 
         } catch (Exception e) {
