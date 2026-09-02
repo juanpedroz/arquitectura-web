@@ -227,5 +227,5 @@ public class ProductoDAO {
         return data;
 
     }
-    
+
 }
