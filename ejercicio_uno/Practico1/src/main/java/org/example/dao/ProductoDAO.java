@@ -1,5 +1,6 @@
 package org.example.dao;
 
+import org.example.dto.ProductoRecaudacionDTO;
 import org.example.entities.Producto;
 
 import java.sql.Connection;
@@ -226,6 +227,52 @@ public class ProductoDAO {
 
         return data;
 
+    }
+
+
+    public ProductoRecaudacionDTO getProductoMasRecaudado() {
+        ProductoRecaudacionDTO data = null;
+
+        String query =  "SELECT p.idProducto, p.nombre, SUM(fp.cantidad * p.valor) AS recaudacion " +
+                        "FROM Factura_Producto fp " +
+                        "JOIN Producto p ON p.idProducto = fp.idProducto " +
+                        "GROUP BY p.idProducto, p.nombre " +
+                        "ORDER BY recaudacion DESC " +
+                        "LIMIT 1";
+        PreparedStatement pst = null;
+        ResultSet result = null;
+
+        try {
+            pst = this.connection.prepareStatement(query);
+            result = pst.executeQuery();
+
+            if (result.next()) {
+                int idProducto = result.getInt("idProducto");
+                String nombre = result.getString("nombre");
+                double recaudacion = result.getDouble("recaudacion");
+
+                data = new ProductoRecaudacionDTO(idProducto, nombre, recaudacion);
+            }
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+
+        } finally {
+            try {
+                if (result != null) {
+                    result.close();
+                }
+                if (pst != null) {
+                    pst.close();
+                }
+                this.connection.commit();
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return data;
     }
 
 }
