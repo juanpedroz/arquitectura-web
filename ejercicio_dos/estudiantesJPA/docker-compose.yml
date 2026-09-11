@@ -1,0 +1,14 @@
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: "estudiantes"
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:

@@ -1,0 +1,22 @@
+target/
+
+### IntelliJ IDEA ###
+.idea/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+
+### NetBeans ###
+nbproject/
+nbdist/
+build/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
