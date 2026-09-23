@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1528cfbd-4fb4-4706-b5a7-5203f9f94eee" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;TatianaPereyra&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/juanpedroz/arquitectura-web.git&quot;,
+    &quot;accountId&quot;: &quot;f79c18c8-f4c5-41c4-af1c-f6cf7944d0de&quot;
+  }
+}</component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0000000000000004" />
+      <entry key="MS500" value="1.000837371131878" />
+      <entry key="S2" value="1.23656825450106" />
+      <entry key="S5" value="2.0005117663620338" />
+      <entry key="S10" value="2.7083070675865386" />
+      <entry key="S30" value="3.4789824181589566" />
+      <entry key="S60" value="3.7260505256220684" />
+      <entry key="M2" value="3.859479293556367" />
+      <entry key="M5" value="3.952047717387989" />
+      <entry key="M10" value="4.825151505777155" />
+      <entry key="M15" value="7.906500777832086" />
+      <entry key="M30" value="22.179609032221066" />
+      <entry key="H1" value="43.27169664051873" />
+      <entry key="H2" value="61.76096181827485" />
+      <entry key="H4" value="74.06435197378245" />
+      <entry key="D1" value="86.30529760080071" />
+      <entry key="W1" value="88.60968714613949" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="5.709116915196172E-38" />
+      <entry key="MS500" value="3.6187428906407173E-8" />
+      <entry key="S2" value="0.02107074228851811" />
+      <entry key="S5" value="0.38933278982861574" />
+      <entry key="S10" value="1.0698459123220598" />
+      <entry key="S30" value="2.1226650122136035" />
+      <entry key="S60" value="2.522786530970631" />
+      <entry key="M2" value="2.7508742780731836" />
+      <entry key="M5" value="2.8978405892749253" />
+      <entry key="M10" value="2.960141588936934" />
+      <entry key="M15" value="3.017159411190975" />
+      <entry key="M30" value="3.209988800558549" />
+      <entry key="H1" value="3.468086263207624" />
+      <entry key="H2" value="3.686135745836752" />
+      <entry key="H4" value="3.8287773902193907" />
+      <entry key="D1" value="3.969244830188129" />
+      <entry key="W1" value="3.9955487560953973" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.20877197985709234" />
+      <entry key="MS500" value="0.7311480340880415" />
+      <entry key="S2" value="1.0987082046821708" />
+      <entry key="S5" value="2.1529059882984485" />
+      <entry key="S10" value="3.528047145501464" />
+      <entry key="S30" value="5.4504277981539975" />
+      <entry key="S60" value="6.160086732920924" />
+      <entry key="M2" value="6.5621994241932216" />
+      <entry key="M5" value="6.829647318938095" />
+      <entry key="M10" value="7.774950313319579" />
+      <entry key="M15" value="10.916596968823926" />
+      <entry key="M30" value="25.385743221666377" />
+      <entry key="H1" value="46.73762541176156" />
+      <entry key="H2" value="65.44591868865245" />
+      <entry key="H4" value="77.89250669168669" />
+      <entry key="D1" value="90.27443314769602" />
+      <entry key="W1" value="92.60522014237914" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3In6llV6cy8KeDeNzp4nGdfArij" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Maven. [compile].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "jpa",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/tati2/Desktop/arquitectura-web/ejercicio_dos",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="temurin-25" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="estudiantes.Main" />
+      <module name="estudiantesJPA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="estudiantes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-34e2839f716b-intellij.indexing.shared.core-IU-262.9437.185" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.9437.185" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1528cfbd-4fb4-4706-b5a7-5203f9f94eee" name="Changes" comment="" />
+      <created>1788388139038</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1788388139038</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
