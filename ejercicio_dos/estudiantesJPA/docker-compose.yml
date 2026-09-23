@@ -6,7 +6,7 @@ services:
       - "3306:3306"
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
-      MYSQL_DATABASE: "estudiantes"
+      MYSQL_DATABASE: "integrador2"
     volumes:
       - db_data:/var/lib/mysql
 

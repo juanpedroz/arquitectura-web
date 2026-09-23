@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1528cfbd-4fb4-4706-b5a7-5203f9f94eee" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiantesJPA/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/estudiantesJPA/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiantesJPA/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/estudiantesJPA/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,61 +36,61 @@
 }</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000000000004" />
-      <entry key="MS500" value="1.000837371131878" />
-      <entry key="S2" value="1.23656825450106" />
-      <entry key="S5" value="2.0005117663620338" />
-      <entry key="S10" value="2.7083070675865386" />
-      <entry key="S30" value="3.4789824181589566" />
-      <entry key="S60" value="3.7260505256220684" />
-      <entry key="M2" value="3.859479293556367" />
-      <entry key="M5" value="3.952047717387989" />
-      <entry key="M10" value="4.825151505777155" />
-      <entry key="M15" value="7.906500777832086" />
-      <entry key="M30" value="22.179609032221066" />
-      <entry key="H1" value="43.27169664051873" />
-      <entry key="H2" value="61.76096181827485" />
-      <entry key="H4" value="74.06435197378245" />
-      <entry key="D1" value="86.30529760080071" />
-      <entry key="W1" value="88.60968714613949" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0000003014466696" />
+      <entry key="S60" value="1.001669633902232" />
+      <entry key="M2" value="1.1896604668667867" />
+      <entry key="M5" value="6.3758766541938" />
+      <entry key="M10" value="19.14335464785103" />
+      <entry key="M15" value="29.504414730111076" />
+      <entry key="M30" value="52.98458018775171" />
+      <entry key="H1" value="82.01303510002572" />
+      <entry key="H2" value="107.91163645420687" />
+      <entry key="H4" value="125.71868928208553" />
+      <entry key="D1" value="143.92601928881732" />
+      <entry key="W1" value="147.40844270005098" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="5.709116915196172E-38" />
-      <entry key="MS500" value="3.6187428906407173E-8" />
-      <entry key="S2" value="0.02107074228851811" />
-      <entry key="S5" value="0.38933278982861574" />
-      <entry key="S10" value="1.0698459123220598" />
-      <entry key="S30" value="2.1226650122136035" />
-      <entry key="S60" value="2.522786530970631" />
-      <entry key="M2" value="2.7508742780731836" />
-      <entry key="M5" value="2.8978405892749253" />
-      <entry key="M10" value="2.960141588936934" />
-      <entry key="M15" value="3.017159411190975" />
-      <entry key="M30" value="3.209988800558549" />
-      <entry key="H1" value="3.468086263207624" />
-      <entry key="H2" value="3.686135745836752" />
-      <entry key="H4" value="3.8287773902193907" />
-      <entry key="D1" value="3.969244830188129" />
-      <entry key="W1" value="3.9955487560953973" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="2.5172760811953414E-195" />
+      <entry key="S5" value="2.6376756330270596E-78" />
+      <entry key="S10" value="2.7846552420381824E-39" />
+      <entry key="S30" value="2.9198790524969903E-13" />
+      <entry key="S60" value="9.356689206530642E-7" />
+      <entry key="M2" value="0.0016752961587669243" />
+      <entry key="M5" value="0.1499418383818701" />
+      <entry key="M10" value="0.6733434730224066" />
+      <entry key="M15" value="1.1242969608489697" />
+      <entry key="M30" value="1.9594983729302913" />
+      <entry key="H1" value="2.709633708136057" />
+      <entry key="H2" value="3.2582295042885137" />
+      <entry key="H4" value="3.599691565275165" />
+      <entry key="D1" value="3.928638636437105" />
+      <entry key="W1" value="3.989683664065512" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.20877197985709234" />
-      <entry key="MS500" value="0.7311480340880415" />
-      <entry key="S2" value="1.0987082046821708" />
-      <entry key="S5" value="2.1529059882984485" />
-      <entry key="S10" value="3.528047145501464" />
-      <entry key="S30" value="5.4504277981539975" />
-      <entry key="S60" value="6.160086732920924" />
-      <entry key="M2" value="6.5621994241932216" />
-      <entry key="M5" value="6.829647318938095" />
-      <entry key="M10" value="7.774950313319579" />
-      <entry key="M15" value="10.916596968823926" />
-      <entry key="M30" value="25.385743221666377" />
-      <entry key="H1" value="46.73762541176156" />
-      <entry key="H2" value="65.44591868865245" />
-      <entry key="H4" value="77.89250669168669" />
-      <entry key="D1" value="90.27443314769602" />
-      <entry key="W1" value="92.60522014237914" />
+      <entry key="MS100" value="0.07910978712314248" />
+      <entry key="MS500" value="0.6020686906157079" />
+      <entry key="S2" value="0.8808693741269792" />
+      <entry key="S5" value="0.9505273210291986" />
+      <entry key="S10" value="0.9749499069332734" />
+      <entry key="S30" value="0.9915795605342962" />
+      <entry key="S60" value="0.9974511147222329" />
+      <entry key="M2" value="1.1891818576311342" />
+      <entry key="M5" value="6.523740373595429" />
+      <entry key="M10" value="19.81359763457137" />
+      <entry key="M15" value="30.625467404217687" />
+      <entry key="M30" value="54.941332311792934" />
+      <entry key="H1" value="84.72075669522597" />
+      <entry key="H2" value="111.16870196448268" />
+      <entry key="H4" value="129.31773207956968" />
+      <entry key="D1" value="147.85453885604983" />
+      <entry key="W1" value="151.39810906101482" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -100,39 +102,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Maven. [compile].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/tati2/Desktop/arquitectura-web/ejercicio_dos",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [compile].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/tati2/Desktop/arquitectura-web/ejercicio_dos&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="temurin-25" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="estudiantes.Main" />
+      <module name="estudiantesJPA" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="estudiantes.*" />
@@ -164,6 +167,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
