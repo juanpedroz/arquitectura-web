@@ -4,58 +4,36 @@ import com.arqweb.integrador_tres.domain.Carrera;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.PersistenceContext;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Repository
-public class CarreraRepository {
+public interface CarreraRepository extends JpaRepository<Carrera, Long> {
 
-    @PersistenceContext
-    private EntityManager em;
-
+    @Modifying
     @Transactional
-    public void insert(Carrera carrera){
-        em.persist(carrera);
-    }
+    @Query(value = "INSERT INTO Carrera (nombre, duracion) VALUES (:nombre, :duracion)", nativeQuery = true)
+    public int agregar(@Param("nombre") String nombre, @Param("duracion") Long duracion);
 
+    @Modifying
     @Transactional
-    public void delete(Long id) {
-        Carrera c = em.find(Carrera.class, id);
-        if (c != null) {
-            em.remove(c); //Tira error si la carrera tiene registros asociados en inscripcion
-        }
-    }
+    @Query("DELETE FROM Carrera c WHERE c.id = :id")
+    public int eliminar(@Param("id") Long id);
 
+    @Modifying
     @Transactional
-    public void update(Carrera carrera){
-        String jpql = "UPDATE Carrera c SET c.nombre = :nombre, c.duracion = :duracion WHERE c.id = :id";
-        em.createQuery(jpql)
-                .setParameter("nombre", carrera.getNombre())
-                .setParameter("duracion", carrera.getDuracion())
-                .setParameter("id", carrera.getId())
-                .executeUpdate();
-        em.clear();
-    }
+    @Query("UPDATE Carrera c SET c.nombre = :nombre, c.duracion = :duracion WHERE c.id = :id")
+    public int actualizar(@Param("id") Long id, @Param("nombre") String nombre, @Param("duracion") Long duracion);
 
-    public List<Carrera> getAll(){
-        String jpql = "SELECT c FROM Carrera c";
-        return em.createQuery(jpql, Carrera.class)
-                .getResultList();//puede estar vacia
-    }
+    @Query("SELECT new com.arqweb.integrador_tres.dto.CarreraDTO(c.id, c.nombre, c.duracion) FROM Carrera c")
+    public List<CarreraDTO> obtenerTodas();
 
-    public Carrera getById(Long id){
-        String jpql = "SELECT c FROM Carrera c WHERE c.id = :id";
-
-        try {
-           return em.createQuery(jpql, Carrera.class)
-                    .setParameter("id", id)
-                    .getSingleResult();
-
-        }catch (NoResultException e){
-            return null;
-        }
-
-    }
+    @Query("SELECT new com.arqweb.integrador_tres.dto.CarreraDTO(c.id, c.nombre, c.duracion) FROM Carrera c WHERE c.id = :id")
+    public CarreraDTO obtenerId(@Param("id") Long id);
 }
