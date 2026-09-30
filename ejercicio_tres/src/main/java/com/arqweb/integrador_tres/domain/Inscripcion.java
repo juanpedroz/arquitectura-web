@@ -1,14 +1,17 @@
 package com.arqweb.integrador_tres.domain;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 
 import java.util.Date;
 
 
 @Entity
-@Data
+@Getter
+@Setter
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
 @EqualsAndHashCode
 public class Inscripcion {
 
@@ -28,18 +31,5 @@ public class Inscripcion {
     private Date graduacion;
     private int antiguedad;
 
-    public Inscripcion() {
-    }
-
-    public String toString() {
-        return "Inscripcion{" +
-                "id=" + id +
-                ", estudiante=" + estudiante +
-                ", carrera=" + carrera +
-                ", inscripcion=" + inscripcion +
-                ", graduacion=" + graduacion +
-                ", antiguedad=" + antiguedad +
-                '}';
-    }
 
 }
