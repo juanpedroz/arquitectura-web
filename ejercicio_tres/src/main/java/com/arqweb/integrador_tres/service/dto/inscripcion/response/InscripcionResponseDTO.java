@@ -1,17 +1,13 @@
 package com.arqweb.integrador_tres.service.dto.inscripcion.response;
 
-import com.arqweb.integrador_tres.domain.Carrera;
-import com.arqweb.integrador_tres.domain.Estudiante;
 import com.arqweb.integrador_tres.domain.Inscripcion;
-import jakarta.persistence.*;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
 @Data
 
-public class IncripcionResponseDTO {
+public class InscripcionResponseDTO {
 
     private final Long id;
     private final String estudianteNombre;
@@ -22,7 +18,7 @@ public class IncripcionResponseDTO {
     private final Date graduacion;
     private final int antiguedad;
 
-    public IncripcionResponseDTO(Inscripcion inscripcion) {
+    public InscripcionResponseDTO(Inscripcion inscripcion) {
         this.id = inscripcion.getId();
         this.estudianteApellido = inscripcion.getEstudiante().getApellido();
         this.estudianteNombre = inscripcion.getEstudiante().getNombre();
