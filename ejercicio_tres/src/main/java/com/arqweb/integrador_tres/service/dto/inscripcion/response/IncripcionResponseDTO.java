@@ -14,16 +14,20 @@ import java.util.Date;
 public class IncripcionResponseDTO {
 
     private final Long id;
-    private final Long estudiante_id;
-    private final Long carrera_id;
+    private final String estudianteNombre;
+    private final String estudianteApellido;
+    private final String estudianteDni;
+    private final String carreraNombre;
     private final Date inscripcion;
     private final Date graduacion;
     private final int antiguedad;
 
     public IncripcionResponseDTO(Inscripcion inscripcion) {
         this.id = inscripcion.getId();
-        this.estudiante_id = inscripcion.getEstudiante().getId();
-        this.carrera_id = inscripcion.getCarrera().getId();
+        this.estudianteApellido = inscripcion.getEstudiante().getApellido();
+        this.estudianteNombre = inscripcion.getEstudiante().getNombre();
+        this.estudianteDni = inscripcion.getEstudiante().getDni();
+        this.carreraNombre = inscripcion.getCarrera().getNombre();
         this.inscripcion = inscripcion.getInscripcion();
         this.graduacion = inscripcion.getGraduacion();
         this.antiguedad = inscripcion.getAntiguedad();
