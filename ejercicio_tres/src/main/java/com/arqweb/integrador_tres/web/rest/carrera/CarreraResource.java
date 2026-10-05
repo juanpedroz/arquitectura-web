@@ -1,9 +1,9 @@
 package com.arqweb.integrador_tres.web.rest.carrera;
 
-import com.arqweb.integrador_tres.Vistas.CarreraInformeResponseDTO;
-import com.arqweb.integrador_tres.Vistas.CarreraInscriptosResponseDTO;
-import com.arqweb.integrador_tres.Vistas.CarreraRequestDTO;
-import com.arqweb.integrador_tres.Vistas.CarreraResponseDTO;
+import com.arqweb.integrador_tres.service.dto.carrera.response.CarreraInformeResponseDTO;
+import com.arqweb.integrador_tres.service.dto.carrera.response.CarreraInscriptosResponseDTO;
+import com.arqweb.integrador_tres.service.dto.carrera.request.CarreraRequestDTO;
+import com.arqweb.integrador_tres.service.dto.carrera.response.CarreraResponseDTO;
 import com.arqweb.integrador_tres.service.CarreraService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

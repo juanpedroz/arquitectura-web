@@ -1,14 +1,13 @@
-package com.arqweb.integrador_tres.Vistas;
+package com.arqweb.integrador_tres.service.dto.carrera.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-@AllArgsConstructor
 @Getter
 @Setter
-public class CarreraInscriptosResponseDTO {
+@AllArgsConstructor
+public class CarreraResponseDTO {
     private String nombre;
     private Long duracion;
-    private Long cantInscriptos;
 }

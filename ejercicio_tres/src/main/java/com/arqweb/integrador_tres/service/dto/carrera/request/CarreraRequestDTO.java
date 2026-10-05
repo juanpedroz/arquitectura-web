@@ -1,4 +1,4 @@
-package com.arqweb.integrador_tres.Vistas;
+package com.arqweb.integrador_tres.service.dto.carrera.request;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

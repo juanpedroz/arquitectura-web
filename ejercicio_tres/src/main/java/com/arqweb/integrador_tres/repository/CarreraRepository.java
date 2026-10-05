@@ -1,7 +1,7 @@
 package com.arqweb.integrador_tres.repository;
 
-import com.arqweb.integrador_tres.Vistas.CarreraCantAnualDTO;
-import com.arqweb.integrador_tres.Vistas.CarreraInscriptosResponseDTO;
+import com.arqweb.integrador_tres.service.dto.carrera.CarreraCantAnualDTO;
+import com.arqweb.integrador_tres.service.dto.carrera.response.CarreraInscriptosResponseDTO;
 import com.arqweb.integrador_tres.domain.Carrera;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -13,7 +13,7 @@ import java.util.List;
 public interface CarreraRepository extends JpaRepository<Carrera, Long> {
 
     //recuperar las carreras con estudiantes inscriptos, y ordenar por cantidad de inscriptos.
-    @Query("SELECT new com.arqweb.integrador_tres.Vistas.CarreraInscriptosResponseDTO(" +
+    @Query("SELECT new com.arqweb.integrador_tres.service.dto.carrera.response.CarreraInscriptosResponseDTO(" +
             "c.nombre, c.duracion, COUNT(i)) " +
             "FROM Carrera c " +
             "JOIN c.inscripciones i " +
@@ -21,7 +21,7 @@ public interface CarreraRepository extends JpaRepository<Carrera, Long> {
             "ORDER BY COUNT(i) DESC")
     List<CarreraInscriptosResponseDTO> obtenerInscriptos();
 
-    @Query("SELECT new com.arqweb.integrador_tres.Vistas.CarreraCantAnualDTO(" +
+    @Query("SELECT new com.arqweb.integrador_tres.service.dto.carrera.CarreraCantAnualDTO(" +
             "c.nombre, c.duracion, i.inscripcion, COUNT(i)) " +
             "FROM Carrera c " +
             "JOIN c.inscripciones i " +
@@ -29,7 +29,7 @@ public interface CarreraRepository extends JpaRepository<Carrera, Long> {
             "ORDER BY c.nombre, i.inscripcion")
     List<CarreraCantAnualDTO> obtenerInscripcionesPorAño();
 
-    @Query("SELECT new com.arqweb.integrador_tres.Vistas.CarreraCantAnualDTO(" +
+    @Query("SELECT new com.arqweb.integrador_tres.service.dto.carrera.CarreraCantAnualDTO(" +
             "c.nombre, c.duracion, i.graduacion, COUNT(i)) " +
             "FROM Carrera c " +
             "JOIN c.inscripciones i " +

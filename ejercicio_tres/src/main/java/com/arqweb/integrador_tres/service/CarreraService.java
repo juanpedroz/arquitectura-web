@@ -1,10 +1,13 @@
 package com.arqweb.integrador_tres.service;
 
-import com.arqweb.integrador_tres.Vistas.*;
 import com.arqweb.integrador_tres.domain.Carrera;
 import com.arqweb.integrador_tres.repository.CarreraRepository;
+import com.arqweb.integrador_tres.service.dto.carrera.CarreraCantAnualDTO;
+import com.arqweb.integrador_tres.service.dto.carrera.response.CarreraInformeResponseDTO;
+import com.arqweb.integrador_tres.service.dto.carrera.request.CarreraRequestDTO;
+import com.arqweb.integrador_tres.service.dto.carrera.response.CarreraInscriptosResponseDTO;
+import com.arqweb.integrador_tres.service.dto.carrera.response.CarreraResponseDTO;
 import jakarta.persistence.EntityNotFoundException;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
