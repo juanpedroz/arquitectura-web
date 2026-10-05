@@ -5,12 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1528cfbd-4fb4-4706-b5a7-5203f9f94eee" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../ejercicio_tres/src/main/java/com/arqweb/integrador_tres/service/dto/inscripcion/request/InscripcionRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ejercicio_tres/src/main/java/com/arqweb/integrador_tres/csv/estudianteCarrera.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../ejercicio_tres/src/main/java/com/arqweb/integrador_tres/csv/estudianteCarrera.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ejercicio_tres/src/main/java/com/arqweb/integrador_tres/domain/Inscripcion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ejercicio_tres/src/main/java/com/arqweb/integrador_tres/domain/Inscripcion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ejercicio_tres/src/main/java/com/arqweb/integrador_tres/repository/InscripcionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ejercicio_tres/src/main/java/com/arqweb/integrador_tres/repository/InscripcionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ejercicio_tres/src/main/java/com/arqweb/integrador_tres/service/dto/inscripcion/response/InscripcionResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ejercicio_tres/src/main/java/com/arqweb/integrador_tres/service/dto/inscripcion/response/InscripcionResponseDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -29,9 +38,13 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/juanpedroz/arquitectura-web.git&quot;,
-    &quot;accountId&quot;: &quot;f79c18c8-f4c5-41c4-af1c-f6cf7944d0de&quot;
+    &quot;accountId&quot;: &quot;ed8d318a-464a-4121-85a9-19014e6d3eec&quot;
   }
 }</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="2.1043169869406446" />
@@ -105,12 +118,13 @@
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;Maven. [compile].executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;integradorTres&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
@@ -148,8 +162,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-34e2839f716b-intellij.indexing.shared.core-IU-262.9437.185" />
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.9437.185" />
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
       </set>
     </attachedChunks>
   </component>
