@@ -1,12 +1,13 @@
 package com.arqweb.integrador_tres.service.dto.inscripcion.response;
 
 import com.arqweb.integrador_tres.domain.Inscripcion;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.util.Date;
 
 @Data
-
+@AllArgsConstructor
 public class InscripcionResponseDTO {
 
     private final Long id;
@@ -14,8 +15,8 @@ public class InscripcionResponseDTO {
     private final String estudianteApellido;
     private final String estudianteDni;
     private final String carreraNombre;
-    private final Date inscripcion;
-    private final Date graduacion;
+    private final int inscripcion;
+    private final int graduacion;
     private final int antiguedad;
 
     public InscripcionResponseDTO(Inscripcion inscripcion) {

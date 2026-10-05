@@ -5,7 +5,6 @@ import lombok.*;
 
 import java.util.Date;
 
-
 @Entity
 @Getter
 @Setter
@@ -27,8 +26,8 @@ public class Inscripcion {
     @JoinColumn( name = "carrera_id" )
     private Carrera carrera;
 
-    private Date inscripcion;
-    private Date graduacion;
+    private int inscripcion;
+    private int graduacion;
     private int antiguedad;
 
 
