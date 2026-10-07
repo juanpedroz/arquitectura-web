@@ -24,9 +24,9 @@ import java.util.Map;
 @Component
 public class CSVReader implements CommandLineRunner {
 
-    private static final String RUTA_CARRERAS = "src/main/resources/csv/carreras.csv";
-    private static final String RUTA_ESTUDIANTES ="src/main/resources/estudiantes.csv";
-    private static final String RUTA_INSCRIPCIONES = "src/main/resources/datos/estudianteCarrera.csv";
+    private static final String RUTA_CARRERAS = "/csv/carreras.csv";
+    private static final String RUTA_ESTUDIANTES ="/csv/estudiantes.csv";
+    private static final String RUTA_INSCRIPCIONES = "/csv/estudianteCarrera.csv";
 
     private final CarreraRepository carreraRepository;
     private final EstudianteRepository estudianteRepository;
