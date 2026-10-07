@@ -23,7 +23,7 @@ public interface InscripcionRepository extends JpaRepository<Inscripcion,Long> {
 
     @Query ("SELECT new com.arqweb.integrador_tres.service.dto.inscripcion.response.InscripcionResponseDTO(" +
             "i.id, i.estudiante.nombre, i.estudiante.apellido, i.estudiante.dni, i.carrera.nombre, i.inscripcion, i.graduacion, i.antiguedad)" +
-            "FROM Inscripcion i" +
+            "FROM Inscripcion i " +
             "WHERE i.id = :id")
     Optional<InscripcionResponseDTO> obtenerId(@Param("id") Long id);
 

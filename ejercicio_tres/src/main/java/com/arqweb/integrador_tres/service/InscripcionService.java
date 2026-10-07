@@ -96,7 +96,7 @@ public class InscripcionService {
         Estudiante estudiante = estudianteRepository.obtenerId(request.getEstudianteId())
                 .orElseThrow(() -> new EntityNotFoundException("Estudiante no encontrado"));
 
-        Carrera carrera = carreraRepository.obtenerId(request.getCarreraId())
+        Carrera carrera = carreraRepository.findById(request.getCarreraId())
                 .orElseThrow(() -> new EntityNotFoundException("Carrera no encontrada"));
 
         //Creo y guardo la nueva inscripción
