@@ -24,36 +24,36 @@ public class CarreraResource {
     //GET : todos los elementos de carrera
     @GetMapping("")
     public List<CarreraResponseDTO> get(){
-        return this.service.getAll();
+        return this.service.obtenerTodas();
     }
 
     //GET : elemento especifico
     @GetMapping("/{id}")
     public CarreraResponseDTO get(@PathVariable long id){
-        return this.service.getById(id);
+        return this.service.obtenerId(id);
     }
 
     //INSERT
     @PostMapping("")
     public CarreraResponseDTO insert(@RequestBody @Valid CarreraRequestDTO request){
-        return this.service.insert(request);
+        return this.service.agregar(request);
     }
 
     //UPDATE
     @PutMapping("/{id}")
     public CarreraResponseDTO update(@PathVariable long id, @RequestBody @Valid CarreraRequestDTO request){
-        return this.service.update(id, request);
+        return this.service.actualizar(id, request);
     }
 
     //DELETE
     @DeleteMapping("/{id}")
     public void delete(@PathVariable long id){
-        this.service.delete(id);
+        this.service.eliminar(id);
     }
 
     //Punto F) : Listar las carreras con su cantidad de inscriptos
     @GetMapping("/inscriptos")
-    public List<CarreraInscriptosResponseDTO> getCatnInscriptos(){
+    public List<CarreraInscriptosResponseDTO> getCantInscriptos(){
         return this.service.getCarrerasInscriptos();
     }
 

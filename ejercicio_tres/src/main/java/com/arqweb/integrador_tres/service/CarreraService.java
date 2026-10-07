@@ -24,7 +24,7 @@ public class CarreraService {
     }
 
     @Transactional
-    public CarreraResponseDTO insert(CarreraRequestDTO carrera){
+    public CarreraResponseDTO agregar(CarreraRequestDTO carrera){
         Carrera nueva = new Carrera();
         nueva.setNombre(carrera.getNombre());
         nueva.setDuracion(carrera.getDuracion());
@@ -35,7 +35,7 @@ public class CarreraService {
     }
 
     @Transactional
-    public CarreraResponseDTO update(Long id, CarreraRequestDTO carrera){
+    public CarreraResponseDTO actualizar(Long id, CarreraRequestDTO carrera){
         Carrera actualizar = this.carreraRepository.findById(id).orElseThrow(
                                     () -> new EntityNotFoundException("Carrera no encontrada"));
 
@@ -49,7 +49,7 @@ public class CarreraService {
     }
 
     @Transactional
-    public void delete(Long id) {
+    public void eliminar(Long id) {
         //Verifico que exista la carrera antes de intentar eliminar
         if (!this.carreraRepository.existsById(id)) {
             throw new EntityNotFoundException("Carrera no encontrada");
@@ -58,14 +58,14 @@ public class CarreraService {
     }
 
     @Transactional(readOnly = true)
-    public List<CarreraResponseDTO> getAll(){
+    public List<CarreraResponseDTO> obtenerTodas(){
         return this.carreraRepository.findAll().stream()
                 .map(c -> new CarreraResponseDTO(c.getNombre(), c.getDuracion()))
                 .toList();
     }
 
     @Transactional(readOnly = true)
-    public CarreraResponseDTO getById(Long id){
+    public CarreraResponseDTO obtenerId(Long id){
         Carrera response = this.carreraRepository.findById(id).orElseThrow(
                               () -> new EntityNotFoundException("Carrera no encontrada"));
 
@@ -76,10 +76,6 @@ public class CarreraService {
     public List<CarreraInscriptosResponseDTO> getCarrerasInscriptos(){
         return this.carreraRepository.obtenerInscriptos();
     }
-
-    //generar un reporte de las carreras, que para cada carrera incluya información de los
-    //inscriptos y egresados por año. Se deben ordenar las carreras alfabéticamente, y
-    //presentar los años de manera cronológica
 
     @Transactional
     public List<CarreraInformeResponseDTO> getInformeCarreras() {
