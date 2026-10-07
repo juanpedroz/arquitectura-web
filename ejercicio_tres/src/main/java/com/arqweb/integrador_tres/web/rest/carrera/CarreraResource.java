@@ -7,6 +7,8 @@ import com.arqweb.integrador_tres.service.dto.carrera.response.CarreraResponseDT
 import com.arqweb.integrador_tres.service.CarreraService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,46 +23,64 @@ public class CarreraResource {
         this.service = service;
     }
 
-    //GET : todos los elementos de carrera
-    @GetMapping("")
-    public List<CarreraResponseDTO> get(){
-        return this.service.obtenerTodas();
+    // GET: todas las carreras
+    @GetMapping
+    public ResponseEntity<List<CarreraResponseDTO>> get() {
+        return ResponseEntity.ok(this.service.obtenerTodas());
     }
 
-    //GET : elemento especifico
+    // GET: carrera específica
     @GetMapping("/{id}")
-    public CarreraResponseDTO get(@PathVariable long id){
-        return this.service.obtenerId(id);
+    public ResponseEntity<CarreraResponseDTO> get(@PathVariable long id) {
+        return ResponseEntity.ok(this.service.obtenerId(id));
     }
 
-    //INSERT
-    @PostMapping("")
-    public CarreraResponseDTO insert(@RequestBody @Valid CarreraRequestDTO request){
-        return this.service.agregar(request);
+    // POST: crear carrera
+    @PostMapping
+    public ResponseEntity<CarreraResponseDTO> insert(
+            @RequestBody @Valid CarreraRequestDTO request) {
+
+        CarreraResponseDTO nueva = this.service.agregar(request);
+
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .body(nueva);
     }
 
-    //UPDATE
+    // PUT: actualizar carrera
     @PutMapping("/{id}")
-    public CarreraResponseDTO update(@PathVariable long id, @RequestBody @Valid CarreraRequestDTO request){
-        return this.service.actualizar(id, request);
+    public ResponseEntity<CarreraResponseDTO> update(
+            @PathVariable long id,
+            @RequestBody @Valid CarreraRequestDTO request) {
+
+        return ResponseEntity.ok(
+                this.service.actualizar(id, request)
+        );
     }
 
-    //DELETE
+    // DELETE: eliminar carrera
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable long id){
+    public ResponseEntity<Void> delete(@PathVariable long id) {
+
         this.service.eliminar(id);
+
+        return ResponseEntity.noContent().build();
     }
 
-    //Punto F) : Listar las carreras con su cantidad de inscriptos
+    // F: carreras con cantidad de inscriptos
     @GetMapping("/inscriptos")
-    public List<CarreraInscriptosResponseDTO> getCantInscriptos(){
-        return this.service.getCarrerasInscriptos();
+    public ResponseEntity<List<CarreraInscriptosResponseDTO>> getCantInscriptos() {
+        return ResponseEntity.ok(
+                this.service.getCarrerasInscriptos()
+        );
     }
 
-    //Punto H) : Obtener informe con detalle de inscriptos y graduados por carrera
+    // H: informe de inscriptos y graduados por carrera
     @GetMapping("/informe")
-    public List<CarreraInformeResponseDTO> getInforme(){
-        return this.service.getInformeCarreras();
+    public ResponseEntity<List<CarreraInformeResponseDTO>> getInforme() {
+        return ResponseEntity.ok(
+                this.service.getInformeCarreras()
+        );
     }
 
 
