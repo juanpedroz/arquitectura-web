@@ -32,7 +32,7 @@ public class InscripcionService {
     }
 
     @Transactional
-    public Optional<InscripcionResponseDTO> obtenerId(Long id) { //El optinal ayuda a manejar el caso en que no se encuentre la inscripcion
+    public InscripcionResponseDTO obtenerId(Long id) { //El optinal ayuda a manejar el caso en que no se encuentre la inscripcion
         return inscripcionRepository.obtenerId(id);
     }
 
@@ -47,11 +47,10 @@ public class InscripcionService {
     }
 
     @Transactional
-    public InscripcionResponseDTO actualizar(InscripcionRequestDTO request) {
+    public InscripcionResponseDTO actualizar(Long id, InscripcionRequestDTO request) {
 
         //Busca la entidad con sus relaciones cargadas
-        Inscripcion inscripcion = inscripcionRepository
-                .obtenerXEstudianteIdYCarreraId(request.getEstudianteId(), request.getCarreraId())
+        Inscripcion inscripcion = inscripcionRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Inscripción no encontrada"));
 
         //Modifica los datos

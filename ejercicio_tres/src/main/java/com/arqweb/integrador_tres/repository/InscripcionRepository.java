@@ -25,7 +25,7 @@ public interface InscripcionRepository extends JpaRepository<Inscripcion,Long> {
             "i.id, i.estudiante.nombre, i.estudiante.apellido, i.estudiante.dni, i.carrera.nombre, i.inscripcion, i.graduacion, i.antiguedad)" +
             "FROM Inscripcion i " +
             "WHERE i.id = :id")
-    Optional<InscripcionResponseDTO> obtenerId(@Param("id") Long id);
+    InscripcionResponseDTO obtenerId(@Param("id") Long id);
 
 
     @Query("SELECT i " +
