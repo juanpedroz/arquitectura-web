@@ -49,4 +49,8 @@ public interface EstudianteRepository extends JpaRepository<Estudiante, Long> {
     List<EstudianteResponseDTO> obtenerXCarreraYCiudad(
             @Param("carreraId") Long carreraId,
             @Param("ciudad") String ciudad);
+
+    // Para eliminar: chequeo si el estudiante tiene inscripciones
+    @Query("SELECT COUNT(i) > 0 FROM Inscripcion i WHERE i.estudiante.id = :id")
+    boolean tieneInscripciones(@Param("id") Long id);
 }

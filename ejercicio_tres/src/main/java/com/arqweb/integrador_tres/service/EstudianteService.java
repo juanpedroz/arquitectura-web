@@ -68,4 +68,43 @@ public class EstudianteService {
     public List<EstudianteResponseDTO> obtenerXCarreraYCiudad(Long carreraId, String ciudad) {
         return estudianteRepository.obtenerXCarreraYCiudad(carreraId, ciudad);
     }
+
+    @Transactional
+    public Optional<EstudianteResponseDTO> actualizar(Long id, EstudianteRequestDTO request) {
+        Optional<Estudiante> existente = estudianteRepository.findById(id);
+        if (existente.isEmpty()) {
+            return Optional.empty();
+        }
+
+        // Si cambia la LU, verifico que no la tenga otro estudiante
+        estudianteRepository.obtenerXLu(request.getLu()).ifPresent(otro -> {
+            if (!otro.getId().equals(id)) {
+                throw new IllegalArgumentException("Ya existe un estudiante con esa LU.");
+            }
+        });
+
+        Estudiante estudiante = existente.get();
+        estudiante.setDni(request.getDni());
+        estudiante.setNombre(request.getNombre());
+        estudiante.setApellido(request.getApellido());
+        estudiante.setEdad(request.getEdad());
+        estudiante.setGenero(request.getGenero());
+        estudiante.setCiudad(request.getCiudad());
+        estudiante.setLu(request.getLu());
+
+        return Optional.of(new EstudianteResponseDTO(estudianteRepository.save(estudiante)));
+    }
+
+    @Transactional
+    public boolean eliminar(Long id) {
+        if (!estudianteRepository.existsById(id)) {
+            return false;
+        }
+        // Inscripcion tiene FK a estudiante: si tiene inscripciones, la BD rechaza el DELETE
+        if (estudianteRepository.tieneInscripciones(id)) {
+            throw new IllegalStateException("El estudiante tiene inscripciones, no se puede eliminar.");
+        }
+        estudianteRepository.deleteById(id);
+        return true;
+    }
 }
