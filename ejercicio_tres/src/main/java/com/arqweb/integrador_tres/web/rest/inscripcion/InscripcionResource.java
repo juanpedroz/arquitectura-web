@@ -9,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/inscripcion")
@@ -69,10 +68,9 @@ public class InscripcionResource {
 
     @DeleteMapping("/{id}")
     public void delete(
-            @PathVariable Long id,
-            @RequestBody @Valid InscripcionRequestDTO inscripcionRequestDTO) {
+            @PathVariable Long id) {
 
-        inscripcionService.eliminar(inscripcionRequestDTO.getEstudianteId(), inscripcionRequestDTO.getCarreraId());
+        inscripcionService.eliminar(id);
     }
 
 }

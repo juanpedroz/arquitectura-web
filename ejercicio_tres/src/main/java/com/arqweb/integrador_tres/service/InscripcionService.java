@@ -66,11 +66,11 @@ public class InscripcionService {
     }
 
     @Transactional
-    public void eliminar(Long estudianteId, Long carreraId) {
+    public void eliminar(Long id) {
 
         //Encuentra la inscripción
         Inscripcion inscripcion = inscripcionRepository
-                .obtenerXEstudianteIdYCarreraId(estudianteId, carreraId)
+                .findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("No se encontró la inscripción para eliminar"));
 
         //La elimina de la base de datos
