@@ -8,6 +8,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class CarreraResponseDTO {
+    private Long id;
     private String nombre;
     private Long duracion;
 }

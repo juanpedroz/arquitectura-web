@@ -31,7 +31,7 @@ public class CarreraService {
 
         Carrera response = this.carreraRepository.save(nueva);
 
-        return new CarreraResponseDTO(response.getNombre(), response.getDuracion());
+        return new CarreraResponseDTO(response.getId(), response.getNombre(), response.getDuracion());
     }
 
     @Transactional
@@ -44,7 +44,7 @@ public class CarreraService {
 
         Carrera response = this.carreraRepository.save(actualizar);
 
-        return new CarreraResponseDTO(response.getNombre(), response.getDuracion());
+        return new CarreraResponseDTO(response.getId(), response.getNombre(), response.getDuracion());
 
     }
 
@@ -60,7 +60,7 @@ public class CarreraService {
     @Transactional(readOnly = true)
     public List<CarreraResponseDTO> obtenerTodas(){
         return this.carreraRepository.findAll().stream()
-                .map(c -> new CarreraResponseDTO(c.getNombre(), c.getDuracion()))
+                .map(c -> new CarreraResponseDTO(c.getId(), c.getNombre(), c.getDuracion()))
                 .toList();
     }
 
@@ -69,7 +69,7 @@ public class CarreraService {
         Carrera response = this.carreraRepository.findById(id).orElseThrow(
                               () -> new EntityNotFoundException("Carrera no encontrada"));
 
-        return new CarreraResponseDTO(response.getNombre(), response.getDuracion());
+        return new CarreraResponseDTO(response.getId(), response.getNombre(), response.getDuracion());
     }
 
     @Transactional
